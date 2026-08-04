@@ -185,11 +185,11 @@ if generate:
 
 # ================= STEP 9: DOWNLOAD BUTTON =================
 
-st.download_button(label="📥 Download Career Roadmap",
-                   data=response,
-                   file_name="Career_Roadmap.txt",
-                   mime="text/plain")
-
+st.download_button(
+  label="📥 Download Career Roadmap",
+  data=response,
+  file_name="Career_Roadmap.txt",
+  mime="text/plain")
 
 # ================= STEP 10: FOOTER =================
 
