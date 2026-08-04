@@ -100,6 +100,11 @@ if GOOGLE_API_KEY:
   
   llm = ChatGoogleGenerativeAI(
     model="gemini-3.5-flash")
+  
+  chain = (
+  prompt
+  |llm
+  |StrOutputParser())
 
 # ================= STEP 6: CREATE PROMPT TEMPLATE =================
 
@@ -135,13 +140,6 @@ Generate a well-structured report with the following sections:
 Make the response practical, detailed, and beginner-friendly.
 Use bullet points wherever possible.
 """)
-
-# ================= STEP 7: CREATE LCEL CHAIN =================
-
-chain = (
-  prompt
-  |llm
-  |StrOutputParser())
 
 # ================= STEP 8: GENERATE CAREER ROADMAP =================
 
