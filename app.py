@@ -98,7 +98,8 @@ with left_col:
 
 if GOOGLE_API_KEY:
   
-  llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash")
+  llm = ChatGoogleGenerativeAI(
+    model="gemini-3.5-flash")
 
 # ================= STEP 6: CREATE PROMPT TEMPLATE =================
 
@@ -137,7 +138,10 @@ Use bullet points wherever possible.
 
 # ================= STEP 7: CREATE LCEL CHAIN =================
 
-chain = (prompt| llm| StrOutputParser())
+chain = (
+  prompt
+  |llm
+  |StrOutputParser())
 
 # ================= STEP 8: GENERATE CAREER ROADMAP =================
 
