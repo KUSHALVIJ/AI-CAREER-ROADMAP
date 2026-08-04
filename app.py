@@ -31,7 +31,7 @@ with col2:
 
 with col3:
   st.metric("📄 Output", "Career Roadmap")
-  
+
   st.sidebar.title("⚙️ Configuration")
 
 # ================= STEP 3: API KEY =================
