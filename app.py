@@ -50,7 +50,8 @@ with left_col:
   with st.form("career_form"):
     name = st.text_input("👤 Full Name")
     qualification = st.selectbox(
-      "🎓 Highest Qualification",[
+      "🎓 Highest Qualification",
+      [
       "10th",
       "12th",
       "Diploma",
@@ -60,37 +61,37 @@ with left_col:
       "MCA",
       "MBA",
       "Other"])
-    
-    experience = st.text_input("💼 Current Year / Experience")
-    
-    skills = st.text_area(
-    "💻 Current Skills",
-    placeholder="Example: Python, SQL, Excel")
-    
-    interests = st.text_area(
-    "❤️ Interests",
-    placeholder="Example: AI, Data Science, Web Development")
-  
-  career = st.selectbox(
-    "🎯 Dream Career",
-    [
-      "AI Engineer",
-      "Data Scientist",
-      "Software Developer",
-      "Cyber Security Analyst",
-      "Cloud Engineer",
-      "Business Analyst",
-      "UI/UX Designer",
-      "Full Stack Developer",
-      "Other"])
-  
-  time = st.slider(
-    "⏰ Study Hours Per Week",
-    min_value=1,
-    max_value=40,
-    value=10)
-  
-  generate = st.form_submit_button("🚀 Generate Career Roadmap")
+
+        experience = st.text_input("💼 Current Year / Experience")
+
+        skills = st.text_area(
+            "💻 Current Skills",
+            placeholder="Example: Python, SQL, Excel")
+
+        interests = st.text_area(
+            "❤️ Interests",
+            placeholder="Example: AI, Data Science, Web Development")
+
+        career = st.selectbox(
+            "🎯 Dream Career",
+            [
+                "AI Engineer",
+                "Data Scientist",
+                "Software Developer",
+                "Cyber Security Analyst",
+                "Cloud Engineer",
+                "Business Analyst",
+                "UI/UX Designer",
+                "Full Stack Developer",
+                "Other"])
+
+        time = st.slider(
+            "⏰ Study Hours Per Week",
+            min_value=1,
+            max_value=40,
+            value=10)
+
+        generate = st.form_submit_button("🚀 Generate Career Roadmap")
 
 # ================= STEP 5: INITIALIZE GEMINI =================
 
