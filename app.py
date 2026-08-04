@@ -141,7 +141,7 @@ Make the response practical, detailed, and beginner-friendly.
 Use bullet points wherever possible.
 """)
 
-# ================= STEP 8: GENERATE CAREER ROADMAP =================
+# ================= STEP 7: GENERATE CAREER ROADMAP =================
 
 if generate:
   if not GOOGLE_API_KEY:
@@ -184,16 +184,7 @@ if generate:
         except Exception as e:
           st.error(f"❌ Error: {e}")
 
-
-# ================= STEP 9: DOWNLOAD BUTTON =================
-
-st.download_button(
-  label="📥 Download Career Roadmap",
-  data=response,
-  file_name="Career_Roadmap.txt",
-  mime="text/plain")
-
-# ================= STEP 10: FOOTER =================
+# ================= STEP 8: FOOTER =================
 
 st.markdown("---")
 
