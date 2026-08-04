@@ -94,19 +94,7 @@ with left_col:
     
     generate = st.form_submit_button("🚀 Generate Career Roadmap")
 
-# ================= STEP 5: INITIALIZE GEMINI =================
-
-if GOOGLE_API_KEY:
-  
-  llm = ChatGoogleGenerativeAI(
-    model="gemini-3.5-flash")
-  
-  chain = (
-  prompt
-  |llm
-  |StrOutputParser())
-
-# ================= STEP 6: CREATE PROMPT TEMPLATE =================
+# ================= STEP 5: CREATE PROMPT TEMPLATE =================
 
 prompt = ChatPromptTemplate.from_template("""
 
@@ -140,6 +128,18 @@ Generate a well-structured report with the following sections:
 Make the response practical, detailed, and beginner-friendly.
 Use bullet points wherever possible.
 """)
+
+# ================= STEP 6: INITIALIZE GEMINI =================
+
+if GOOGLE_API_KEY:
+  
+  llm = ChatGoogleGenerativeAI(
+    model="gemini-3.5-flash")
+  
+  chain = (
+  prompt
+  |llm
+  |StrOutputParser())
 
 # ================= STEP 7: GENERATE CAREER ROADMAP =================
 
